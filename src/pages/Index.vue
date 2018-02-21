@@ -1,6 +1,6 @@
 <template>
 <div class="Index-container">
-    <h1>Index-container</h1>   
+    <h1>Index-container!</h1>   
   </div>
 </template>
 

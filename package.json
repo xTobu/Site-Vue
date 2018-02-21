@@ -1,6 +1,6 @@
 {
-  "name": "Admin",
-  "description": "A Vue.js Admin",
+  "name": "site",
+  "description": "A practice site with Vue.js",
   "version": "1.0.0",
   "author": "xTobu <junxiang.oriint@gmail.com>",
   "license": "MIT",
