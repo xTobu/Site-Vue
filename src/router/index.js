@@ -16,7 +16,7 @@ import Index_backup from '../pages/Index_backup';
 
 Vue.use(VueRouter);
 /* Layout */
-import Layout from '../layouts/layout'
+import Layout from '../layouts/default'
 export default new VueRouter({
     // https://router.vuejs.org/zh-cn/api/options.html 使用 HTML 5 模式 mode: 'history',
     // base: __dirname, routre 表
