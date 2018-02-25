@@ -1,6 +1,5 @@
 <template>
-    <section class="app-main" style="min-height: 100%">
-        <h1>app-main</h1>
+    <section class="app-main">
         <transition name="fade" mode="out-in">
             <!-- <keep-alive :include="cachedViews"> -->
             <keep-alive >                          

@@ -1,15 +1,11 @@
 <template>
-<div class="app-wrapper" >
-     <h1>Layout</h1>
-    <h1>app-wrapper</h1>
-    <hr>
-	<!-- <sidebar class="sidebar-container"></sidebar> -->
+<div class="app-wrapper" >    
+    <SideBar></SideBar>
+	
 	<div class="main-container">
-        <h2>main-container</h2>
-		<!-- <navbar></navbar>
-		<tags-view></tags-view> -->
-        <hr>
+        <NavBar></NavBar>
 		<AppMain></AppMain>
+        <!-- <RightArea></RightArea> -->
 	</div>
 </div>
 
@@ -17,11 +13,14 @@
 </template>
 
 <script>
-import { AppMain } from './components'
+import { AppMain, SideBar,NavBar,RightArea } from './components'
 export default {
   name: 'layout',
   components: {
-    AppMain
+    AppMain,
+    SideBar,
+    NavBar,
+    RightArea
   },
   computed: {
     // sidebar() {
@@ -33,5 +32,5 @@ export default {
 
 
 <style lang="scss">
-
+@import "../assets/scss/style.scss";
 </style>
