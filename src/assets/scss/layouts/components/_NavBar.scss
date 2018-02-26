@@ -1,0 +1,27 @@
+
+div.navbar {
+    min-height: 100px;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+
+div.navbar div.navbar-right {
+    // float: left;
+    // width: 20%;
+}
+
+div.navbar .navbar-left {
+	float: left;
+	padding: 50px 25px;
+	min-width: 75%;
+}
+
+div.navbar .navbar-right {
+	float: left;
+	padding: 25px;
+}
+div.navbar  a {
+	font-weight: 600;
+	font-size: 24px;
+	color: #777;
+}

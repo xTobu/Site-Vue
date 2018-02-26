@@ -1,0 +1,22 @@
+@import "components/SideBar";
+@import "components/NavBar";
+@import "components/AppMain";
+
+div.app-wrapper {
+    height: 100vh;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+div.main-container {
+    // background-color: #f4f3ef;
+    background-color: rgb(243, 240, 232);
+    position: relative;
+    z-index: 2;
+    float: right;
+    width: calc(100% - 260px);
+    min-height: 100%;
+}
+
+

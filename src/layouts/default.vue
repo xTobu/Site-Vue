@@ -5,7 +5,6 @@
 	<div class="main-container">
         <NavBar></NavBar>
 		<AppMain></AppMain>
-        <!-- <RightArea></RightArea> -->
 	</div>
 </div>
 
@@ -13,14 +12,13 @@
 </template>
 
 <script>
-import { AppMain, SideBar,NavBar,RightArea } from './components'
+import { AppMain, SideBar,NavBar } from './components'
 export default {
   name: 'layout',
   components: {
     AppMain,
     SideBar,
-    NavBar,
-    RightArea
+    NavBar
   },
   computed: {
     // sidebar() {

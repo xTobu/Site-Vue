@@ -7,7 +7,6 @@
 <script>
 // import { Select, Button } from 'element-ui';
 export default {
-	
 };
 </script>
 
