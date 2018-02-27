@@ -18,7 +18,6 @@
 					<p>
 						{{link.name}}
 					</p>
-					<!-- {{link.name}} -->
 				</a>
 			</router-link>
         </ul>
