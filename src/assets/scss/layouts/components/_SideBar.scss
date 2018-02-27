@@ -65,11 +65,11 @@ div.sidebar-wrapper ul li>a {
    
 }
 
-div.sidebar-wrapper ul li>a.router-link-active {
+div.sidebar-wrapper ul li.router-link-active >a {
     color: #00ff85;
 }
 
-div.sidebar-wrapper ul li a:hover:not(.router-link-active) {
+div.sidebar-wrapper ul li:not(.router-link-active) a:hover {
     color: #fff;
     opacity: 1;
 }
