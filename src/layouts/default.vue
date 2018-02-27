@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { AppMain, SideBar, NavBar } from './components';
+import { AppMain, SideBar, NavBar } from './ContainerUI';
 export default {
 	name: 'layout',
 	components: {
