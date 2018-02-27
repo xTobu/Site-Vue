@@ -14,6 +14,7 @@ div.sidebar div.logo {
     height: 100px;
     //min-height: 100px;
     margin: 0 25px;
+    text-align: center;
 }
 
 div.sidebar div.logo img {
@@ -36,7 +37,7 @@ div.sidebar div.logo>a {
 div.sidebar-wrapper {
     // background: url(../assets/img/texture.png) repeat;
     height: 100%;
-    text-align: center;
+   
 }
 
 div.sidebar-wrapper ul {
@@ -44,6 +45,7 @@ div.sidebar-wrapper ul {
     padding: 0;
     margin: 0;
     overflow: auto; //border: 1px solid rgba(0,0,0,.0975);
+    
 }
 
 //div.sidebar-wrapper ul li{
@@ -52,7 +54,7 @@ div.sidebar-wrapper ul {
 div.sidebar-wrapper ul li>a {
     display: block;
     color: #fafafa;
-    padding: 25px;
+    padding: 25px 60px;
     text-decoration: none;
     opacity: .7;
     font-weight: 600;
@@ -72,4 +74,22 @@ div.sidebar-wrapper ul li.router-link-active >a {
 div.sidebar-wrapper ul li:not(.router-link-active) a:hover {
     color: #fff;
     opacity: 1;
+}
+
+div.sidebar-wrapper ul li>a p {
+    // display: inline-block;
+    margin: 0;
+    line-height: 30px;
+   
+}
+
+
+div.sidebar-wrapper ul li>a i {
+    font-size: 24px;
+    float: left;
+    margin-right: 15px;
+    line-height: 30px;
+    width: 30px;
+    text-align: center;
+   
 }

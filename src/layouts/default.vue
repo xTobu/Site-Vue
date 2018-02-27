@@ -25,13 +25,18 @@ export default {
 			return [
 				{
 					name: 'Home',
-					icon: 'ti-panel',
+					icon: 'ti-home',
 					path: '/Index',
 				},
 				{
 					name: 'About',
 					icon: 'ti-user',
 					path: '/About',
+				},
+				{
+					name: 'Count',
+					icon: 'ti-tablet',
+					path: '/Count',
 				},
 			];
 		},

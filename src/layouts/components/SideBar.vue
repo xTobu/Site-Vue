@@ -3,20 +3,22 @@
 <div class="sidebar">
     <div class="sidebar-wrapper">
         <div class="logo">  
-            <img src="../../assets/img/gopher.png" alt="">
+			<img src="../../assets/img/gopher.png" alt="">
         </div>
+		<!-- <i class="fa fa-camera-retro"></i> -->
         <!-- <ul>
             <li><router-link :to="'/Index'">Home</router-link></li>
             <li><router-link :to="'/About'">About</router-link></li>
         </ul> -->
+		
 		<ul>
 			<router-link v-for="(link,index) in sidebarLinks" :to="link.path" tag="li" :ref="link.name" :key="link.name + index">
 				<a>
-					<!-- <i :class="link.icon"></i>
+					<i :class="link.icon"></i>
 					<p>
 						{{link.name}}
-					</p> -->
-					{{link.name}}
+					</p>
+					<!-- {{link.name}} -->
 				</a>
 			</router-link>
         </ul>
