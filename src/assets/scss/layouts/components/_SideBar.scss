@@ -11,7 +11,8 @@ div.sidebar {
 
 div.sidebar div.logo {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    min-height: 100px;
+    height: 100px;
+    //min-height: 100px;
     margin: 0 25px;
 }
 
@@ -29,6 +30,7 @@ div.sidebar div.logo>a {
     padding: 10px;
     text-decoration: none;
     font-size: 20px;
+    
 }
 
 div.sidebar-wrapper {
@@ -40,6 +42,7 @@ div.sidebar-wrapper {
 div.sidebar-wrapper ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
     overflow: auto; //border: 1px solid rgba(0,0,0,.0975);
 }
 
@@ -58,6 +61,7 @@ div.sidebar-wrapper ul li>a {
     -o-transition: all 150ms ease-in;
     -ms-transition: all 150ms ease-in;
     transition: all 150ms ease-in;
+    line-height: 30px;
    
 }
 

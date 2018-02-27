@@ -22,7 +22,11 @@ Vue.use(VueRouter);
 const constantRouterMap = [
 	{
 		path: '/Login',
-		component: Login,
+        component: Login,
+        meta: {
+            title: 'Login',
+            noCache: true,
+        },
 		//hidden: true
 	},
 	{
@@ -114,8 +118,9 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
 	if (to.meta.title) {
         document.title = to.meta.title;
-        next();
-	}
+       
+    }
+    next();
 });
 
 export default router;
