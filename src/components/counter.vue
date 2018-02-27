@@ -1,13 +1,28 @@
 <template>
-<div>
-    <span>Count:{{Count}}, doubleCount:{{doubleCount}}</span>
-    <input type="button" value="+" @click.prevent="plus" >
-    <input type="button" value="-" @click.prevent="minus">
-	<input type="button" value="one" @click.prevent="one">
-	<input type="button" value="two" @click.prevent="two">
-	<a v-bind:href="url">123</a>
-	
-	<input type="button" v-bind:value="msg" @click.prevent="changemsg">
+<div class="counter">    
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-9">
+				<div class="card">
+					<div class="content">
+						<span>Count : {{Count}}</span>
+						<br>
+						<span>Double Count : {{doubleCount}}</span>
+						<hr>
+						<input type="button" value="+" @click.prevent="plus" >
+						<input type="button" value="-" @click.prevent="minus">
+						<input type="button" value="one" @click.prevent="one">
+						<input type="button" value="two" @click.prevent="two">
+						<hr>
+						<a v-bind:href="url">href with v-bind</a>
+						
+						<input type="button" v-bind:value="msg" @click.prevent="changemsg">
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
 </div>
 
 </template>
@@ -22,24 +37,17 @@ export default {
 	name: 'Count',
 	data() {
 		return {
-			msg: 'Count',
-			url:'./post'
+			msg: 'Click',
+			url: './post',
 		};
 	},
 	computed: {
-		// Count() {
-		// 	return this.$store.getters.Count;
-		// },
-		// getCount() {
-		// 	return this.$store.getters.getCount;
-		// },
-
 		// 將getter映射過來
 		...mapGetters(['Count', 'doubleCount']),
 	},
 	methods: {
-		changemsg(){
-			this.msg = '123';
+		changemsg() {
+			this.msg == 'Clicked' ? this.msg = 'Click':this.msg = 'Clicked';
 		},
 		plus() {
 			//this.$store.dispatch('increment');

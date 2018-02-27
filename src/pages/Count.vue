@@ -1,5 +1,13 @@
 <template>
   <div class="Count-container">
-    <h1>Count-container!</h1>   
+   <counter></counter>
   </div>
 </template>
+<script>
+import counter from '../components/counter'
+export default {
+ components: {
+       counter
+    }
+}
+</script>

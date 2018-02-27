@@ -9,6 +9,7 @@ import util from './util';
 //ElementUI
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import 'bootstrap/dist/css/bootstrap.css'
 Vue.use(ElementUI);
 
 Vue.use(util);

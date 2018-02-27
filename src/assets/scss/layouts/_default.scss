@@ -1,6 +1,6 @@
-@import "components/SideBar";
-@import "components/NavBar";
-@import "components/AppMain";
+@import "ContainerUI/SideBar";
+@import "ContainerUI/NavBar";
+@import "ContainerUI/AppMain";
 
 div.app-wrapper {
     height: 100vh;

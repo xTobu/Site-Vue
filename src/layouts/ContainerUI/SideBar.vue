@@ -46,7 +46,7 @@ export default {
 	},
 	data() {
 		return {
-			linkHeight: 80,
+			linkHeight: 70,
 			activeLinkIndex: 0,
 		};
 	},

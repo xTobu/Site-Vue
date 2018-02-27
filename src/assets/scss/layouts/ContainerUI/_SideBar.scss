@@ -11,27 +11,26 @@ div.sidebar {
 
 div.sidebar div.logo {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    height: 100px;
+    height: 80px;
     //min-height: 100px;
     margin: 0 25px;
     text-align: center;
 }
 
 div.sidebar div.logo img {
-    height: 75px;
+    height: 52.5px;
     /* position: absolute; */
     /* transform: translate(-50%, 20%); */
-    margin: 12.5px 0;
+    margin: 15px 0;
    
 }
 
-div.sidebar div.logo>a {
+div.sidebar div.logo > a {
     display: block;
     color: #fafafa;
     padding: 10px;
     text-decoration: none;
     font-size: 20px;
-    
 }
 
 div.sidebar-wrapper {
@@ -54,7 +53,7 @@ div.sidebar-wrapper ul {
 div.sidebar-wrapper ul li>a {
     display: block;
     color: #fafafa;
-    padding: 25px 60px;
+    padding: 20px 60px;
     text-decoration: none;
     opacity: .7;
     font-weight: 600;

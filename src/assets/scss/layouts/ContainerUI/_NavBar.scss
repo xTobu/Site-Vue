@@ -1,9 +1,8 @@
-
 div.navbar {
-    min-height: 100px;
-    border-bottom: 1px solid #CCCCCC;
+	min-height: 80px;
+	
+	border-bottom: 1px solid #cccccc;
 }
-
 
 // div.navbar div.navbar-right {
 //     // float: left;
@@ -12,15 +11,15 @@ div.navbar {
 
 div.navbar .navbar-left {
 	float: left;
-	padding: 50px 25px;
-	min-width: 75%;
+	padding: 25px 0px 0px 25px;
+    min-width: 75%;
 }
 
 div.navbar .navbar-right {
-	float: left;
+	float: left !important;
 	padding: 25px;
 }
-div.navbar  a {
+div.navbar a {
 	font-weight: 600;
 	font-size: 24px;
 	color: #777;

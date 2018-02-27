@@ -12,7 +12,6 @@ import Login from '../pages/Login';
 import Index from '../pages/Index';
 import About from '../pages/About';
 import Count from '../pages/Count';
-import Index_backup from '../pages/Index_backup';
 // init
 /* Layout */
 import Layout from '../layouts/default';
@@ -63,11 +62,7 @@ const constantRouterMap = [
 			},
 		],
 	},
-	{
-		path: '/Index_backup',
-		name: 'Index_backup',
-		component: Index_backup,
-	},
+
 
 	//slot
 	{

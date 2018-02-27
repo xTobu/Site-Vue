@@ -27,13 +27,13 @@
   $bg-nude: #f3f0e8 !default;
   
   .moving-arrow {
-    border-right: 17px solid $bg-nude;
-    border-top: 17px solid transparent;
-    border-bottom: 17px solid transparent;
+    border-right: 15px solid #f3f0e8;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
     display: inline-block;
     position: absolute;
-    left: 243px;
-    top: 125px;
+    left: 245px;
+    top: 100px;
     transition: all 0.5s cubic-bezier(0.29, 1.42, 0.79, 1);
-  }
+}
 </style>
