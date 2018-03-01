@@ -23,4 +23,9 @@ div.navbar a {
 	font-weight: 600;
 	font-size: 24px;
 	color: #777;
+	cursor: default;
+}
+
+div.navbar a:hover {
+	text-decoration: none;
 }
