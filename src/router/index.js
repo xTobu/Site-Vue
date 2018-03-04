@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import store from '../store';
 import VueRouter from 'vue-router';
 
 //slot
@@ -21,16 +22,18 @@ Vue.use(VueRouter);
 const constantRouterMap = [
 	{
 		path: '/Login',
-        component: Login,
-        meta: {
-            title: 'Login',
-            noCache: true,
-        },
+		name: 'Login',
+		component: Login,
+		meta: {
+			title: 'Login',
+			noCache: true,
+		},
 		//hidden: true
 	},
 	{
-		path: '',
+		path: '/',
 		component: Layout,
+		//導去登入頁
 		redirect: 'Index',
 		children: [
 			{
@@ -50,8 +53,8 @@ const constantRouterMap = [
 					title: 'About',
 					noCache: true,
 				},
-            },
-            {
+			},
+			{
 				path: 'Count',
 				component: Count,
 				name: 'Count',
@@ -62,7 +65,6 @@ const constantRouterMap = [
 			},
 		],
 	},
-
 
 	//slot
 	{
@@ -99,9 +101,11 @@ const constantRouterMap = [
 	},
 
 	// router 轉址
+	// 當 url path 不符合 router 表的時候，預設轉址到
+	// 順序一定要最後面
 	{
 		path: '/*',
-		redirect: '/',
+		redirect: '/Login',
 	},
 ];
 const router = new VueRouter({
@@ -111,11 +115,41 @@ const router = new VueRouter({
 	routes: constantRouterMap,
 });
 router.beforeEach((to, from, next) => {
+	//判斷META
 	if (to.meta.title) {
-        document.title = to.meta.title;
-       
+		document.title = to.meta.title;
+	}
+	let token = window.localStorage.getItem('token');
+	//let user = JSON.parse(window.localStorage.getItem('auth-user'))
+	// console.log('token:',store.state.auth.token)
+	//console.log(to.fullPath, from.fullPath);
+
+
+	if (
+		to.matched.some(record => {
+			console.log(record.path);
+			if (record.name !== 'Login') {
+				return true;
+			}
+		})
+	) {
+		console.log('不是Login');
+
+		if (!store.state.auth.token) {
+			// 如果沒有 token
+			console.log('token?', store.state.auth.token);
+			// 轉跳到 login page
+			next({ path: '/Login' });
+			//router.push({ path: "Login"})
+        }
+        else{
+            next();
+        }
     }
-    next();
+    else {
+        next();
+    }
+
 });
 
 export default router;

@@ -64,7 +64,7 @@ export default {
 	},
 	mounted() {
 		this.findActiveLink();
-		console.log(this.moveY);
+		//console.log(this.moveY);
 	},
 	watch: {
 		$route: function(newRoute, oldRoute) {
