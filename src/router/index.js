@@ -127,14 +127,13 @@ router.beforeEach((to, from, next) => {
 
 	if (
 		to.matched.some(record => {
-			console.log(record.path);
+			//console.log(record.path);
 			if (record.name !== 'Login') {
 				return true;
 			}
 		})
 	) {
 		console.log('不是Login');
-
 		if (!store.state.auth.token) {
 			// 如果沒有 token
 			console.log('token?', store.state.auth.token);
@@ -147,6 +146,7 @@ router.beforeEach((to, from, next) => {
         }
     }
     else {
+		store.state.auth.token = false;
         next();
     }
 

@@ -4,10 +4,10 @@
         <div style="width: 400px">
         <el-form :label-position="labelPosition" label-width="100px" :model="loginForm" ref="loginForm" :rules="rules">
             <el-form-item label="帳號" prop="account">
-                <el-input v-model="loginForm.account"></el-input>
+                <el-input  v-model="loginForm.account"></el-input>
             </el-form-item>
             <el-form-item label="密碼" prop="password">
-                <el-input v-model="loginForm.password"></el-input>
+                <el-input  v-model="loginForm.password"></el-input>
             </el-form-item>
             <el-form-item>
                 <el-button type="primary" @click="submitForm('loginForm')">登入</el-button>
@@ -25,8 +25,8 @@ export default {
 		return {
 			labelPosition: 'right',
 			loginForm: {
-				account: '',
-				password: '',
+				account: 'admin',
+				password: '0000',
 			},
 			rules: {
 				account: [{ required: true, message: '請輸入帳號', trigger: 'blur' }],
@@ -42,16 +42,17 @@ export default {
 			this.$refs[formName].validate(valid => {
 				if (valid) {
                     //資料正確
-                    alert('submit!');
+                    // alert('submit!');
                     
-                    this.$store.state.auth.isLogin = true;
+					this.$store.state.auth.token = true;
+					this.$router.push({ path: "Index"})
 
 				} else {
 					console.log('error submit!!');
 					return false;
 				}
             });
-            console.log(this.$store.state.auth.isLogin)
+            console.log(this.$store.state.auth.token)
 		},
 		resetForm(formName) {
 			this.$refs[formName].resetFields();

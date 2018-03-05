@@ -4,13 +4,20 @@
         <a>{{ $route.name }}</a>
       </div>
       <div class="navbar-right">
-          Right Place
+           <el-button type="danger" plain @click="logout()">登出</el-button>
       </div>
   </div>
 </template>
 <script>
 export default {
 	name: 'NavBar',
+	methods: {
+		logout() {
+      this.$store.state.auth.token = false;
+      this.$router.push({ path: "Login"})
+			//console.log(this.$store.state.auth.token);
+		},
+	},
 };
 </script>
 
