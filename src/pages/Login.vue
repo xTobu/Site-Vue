@@ -25,8 +25,8 @@ export default {
 		return {
 			labelPosition: 'right',
 			loginForm: {
-				account: 'admin',
-				password: '0000',
+				account: '',
+				password: '',
 			},
 			rules: {
 				account: [{ required: true, message: '請輸入帳號', trigger: 'blur' }],
@@ -34,25 +34,30 @@ export default {
 			},
 		};
 	},
+	mounted() {
+		this.loginForm.account = 'admin';
+		this.loginForm.password = '0000';
+	},
+	created() {
+		// this.loginForm.account = 'admin';
+		// this.loginForm.password = '0000';
+	},
 	methods: {
 		submitForm(formName) {
-            
-
-            //判斷
+			//判斷
 			this.$refs[formName].validate(valid => {
 				if (valid) {
-                    //資料正確
-                    // alert('submit!');
-                    
-					this.$store.state.auth.token = true;
-					this.$router.push({ path: "Index"})
+					//資料正確
+					// alert('submit!');
 
+					this.$store.state.auth.token = true;
+					this.$router.push({ path: 'Index' });
 				} else {
 					console.log('error submit!!');
 					return false;
 				}
-            });
-            console.log(this.$store.state.auth.token)
+			});
+			console.log(this.$store.state.auth.token);
 		},
 		resetForm(formName) {
 			this.$refs[formName].resetFields();
