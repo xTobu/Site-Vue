@@ -4,7 +4,7 @@
         <a>{{ $route.name }}</a>
       </div>
       <div class="navbar-right">
-           <el-button type="danger" plain @click="logout()">登出</el-button>
+           <el-button type="danger" plain @click="logout()">Logout</el-button>
       </div>
   </div>
 </template>
