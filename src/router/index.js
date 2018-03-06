@@ -133,7 +133,7 @@ router.beforeEach((to, from, next) => {
 			}
 		})
 	) {
-		console.log('不是Login');
+		//console.log('不是Login');
 		if (!store.state.auth.token) {
 			// 如果沒有 token
 			console.log('token?', store.state.auth.token);
