@@ -16,7 +16,30 @@ div.card{
     position: relative;
     z-index: 1;
 }
-
-div.card div.content{
+div.card p {
+    margin: 0;
+}
+div.card div.wrap{
     padding: 30px;
+}
+
+
+div.card p.title{
+    font-size: 24px;
+}
+
+div.card p.subtitle{
+    font-size: 18px;
+    font-weight: 400;
+    color: #9A9A9A;
+}
+
+div.card p.stats {
+    font-size: 18px;
+    font-weight: 300;
+    color: #9A9A9A;
+}
+div.card p.stats i{
+    margin: 0 5px 0 0;
+    font-size: 105%;
 }

@@ -1,6 +1,12 @@
 <template>
   <div class="Count-container">
-   <counter></counter>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-9">
+          <counter></counter>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
