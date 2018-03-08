@@ -119,7 +119,8 @@ router.beforeEach((to, from, next) => {
 	if (to.meta.title) {
 		document.title = to.meta.title;
 	}
-	let token = window.localStorage.getItem('token');
+	
+	//let token = window.localStorage.getItem('token');
 	//let user = JSON.parse(window.localStorage.getItem('auth-user'))
 	// console.log('token:',store.state.auth.token)
 	//console.log(to.fullPath, from.fullPath);

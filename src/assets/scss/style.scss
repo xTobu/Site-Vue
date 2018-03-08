@@ -8,7 +8,7 @@ body {
 }
 
 div.card{
-    border-radius: 6px;
+    border-radius: 8px;
     box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
     background-color: #FFFFFF;
     color: #252422;
@@ -22,7 +22,9 @@ div.card p {
 div.card div.wrap{
     padding: 30px;
 }
-
+div.card div.content{
+    padding: 20px;
+}
 
 div.card p.title{
     font-size: 24px;

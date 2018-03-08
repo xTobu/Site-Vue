@@ -95,6 +95,26 @@ export default {
 	//async-await
 	////////////////////////////////////////////
 
+	login({ dispatch, commit },payload) {
+		console.log(payload)
+		return new Promise((resolve, reject) => {			
+			axios
+				.post(
+					'http://localhost:8080/auth/login',
+					qs.stringify({
+						username: payload.username,
+						password: payload.password,
+					})
+				)
+				.then(function(response) {					
+					resolve(response.data);
+				})
+				.catch(function(error) {
+					console.log(error.response);
+				});
+		});
+	},
+
 	async one({ commit }) {
 		commit('increment', await one());
 	},
@@ -107,11 +127,11 @@ export default {
 		commit('increment', await two());
 	},
 
-	async clickChange({commit }) {
+	async clickChange({ commit }) {
 		await one();
 
 		const res = await axios.get('http://127.0.0.1:8000/vue');
-		console.log('res : ',res.data);
+		console.log('res : ', res.data);
 		commit('Change', res.data);
 
 		// const r = await axios.post(
@@ -122,8 +142,7 @@ export default {
 		// 	})
 		// );
 		// console.log('r : ',r.data);
-		
-		
+
 		// await axiosGetData();
 	},
 };

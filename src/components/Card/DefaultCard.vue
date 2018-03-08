@@ -8,13 +8,15 @@
             <p class="subtitle">
                 <slot name="subtitle"></slot>
             </p>
-        </div>
+        </div>        
         <hr>
+
         <div class="content">
             <slot name="content"></slot>
             
         </div>
         <hr>
+        
         <div class="footer">  
             <p class="stats">
                 <slot name="footer"></slot>
