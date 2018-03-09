@@ -74,10 +74,9 @@ export default {
 		resetForm(formName) {
 			this.$refs[formName].resetFields();
 		},
-		get() {
+		get() {		
 			
-			
-			console.log('Authorization：',axios.defaults.headers.common.Authorization);
+			// console.log('Authorization：',axios.defaults.headers.common.Authorization);
 			axios
 				.get('http://localhost:8080/api/get')
 				.then(function(response) {
