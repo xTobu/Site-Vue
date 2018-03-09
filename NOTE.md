@@ -5,6 +5,7 @@ ___
 ## 2018-03-08
 ### axios、qs.stringify、x-www-form-urlencoded
 #### 當axios使用qs.stringify傳送Content-Type:application/x-www-form-urlencoded時
+- axios.post
 ```
 axios.post(
   'http://localhost:8080/auth/login',
@@ -22,6 +23,7 @@ Form Data(2)
 ```  
 
 #### 另一種axios
+- axios.post
 ```
  axios({
  	method: 'post',
