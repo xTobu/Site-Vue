@@ -2,7 +2,7 @@
 > 記錄學習過程的大小事  
 ___
 
-## 2018-03-08
+##### 2018-03-08
 ### axios、qs.stringify、x-www-form-urlencoded
 #### 當axios使用qs.stringify傳送Content-Type:application/x-www-form-urlencoded時
 - axios.post
@@ -44,7 +44,7 @@ Form Data
 ```  
 ___
 
-## 2018-03-04
+##### 2018-03-04
 ### router.beforeEach
 #### next()的使用錯誤，MVVM觀念導正。
 - 錯誤
