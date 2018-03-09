@@ -96,7 +96,7 @@ export default {
 	////////////////////////////////////////////
 
 	login({ dispatch, commit },payload) {
-		console.log(payload)
+		// console.log(payload)
 		return new Promise((resolve, reject) => {			
 			axios
 				.post(
@@ -110,7 +110,8 @@ export default {
 					resolve(response.data);
 				})
 				.catch(function(error) {
-					console.log(error.response);
+					resolve(error.response);
+					
 				});
 		});
 	},

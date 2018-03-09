@@ -17,6 +17,8 @@ import Count from '../pages/Count';
 /* Layout */
 import Layout from '../layouts/default';
 
+import axios from 'axios';
+
 Vue.use(VueRouter);
 
 const constantRouterMap = [
@@ -137,7 +139,7 @@ router.beforeEach((to, from, next) => {
 		//console.log('不是Login');
 		if (!store.state.auth.token) {
 			// 如果沒有 token
-			console.log('token?', store.state.auth.token);
+			//console.log('token?', store.state.auth.token);
 			// 轉跳到 login page
 			next({ path: '/Login' });
 			//router.push({ path: "Login"})
@@ -147,6 +149,7 @@ router.beforeEach((to, from, next) => {
         }
     }
     else {
+		axios.defaults.headers.common['Authorization'] = ``;
 		store.state.auth.token = false;
         next();
     }
