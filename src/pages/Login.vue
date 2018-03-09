@@ -17,7 +17,7 @@
             </el-form-item>
         </el-form>
         </div>
-		{{this.$store.state.auth.token}}
+		<!-- {{this.$store.state.auth.token}} -->
     </div>
 </template>
 
