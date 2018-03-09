@@ -61,8 +61,8 @@ export default {
 						.then(res => {
 							// 儲存與跳轉
 							this.$store.state.auth.token = res.token;
-							// axios.defaults.headers.common['Authorization'] = `Bearer ${user.token}`;
-							// this.$router.push({ path: 'Index' });
+							axios.defaults.headers.common['Authorization'] = `Bearer ${res.token}`;
+							 this.$router.push({ path: 'Index' });
 						});
 				} else {
 					console.log('error submit!!');
@@ -76,14 +76,7 @@ export default {
 		},
 		get() {
 			
-			// axios.create({			
-			// 	headers: {
-			// 		Authorization: `Bearer ${this.$store.state.auth.token}`,
-			// 	},
-			// });
-
 			
-			axios.defaults.headers.common['Authorization'] = `Bearer ${this.$store.state.auth.token}`;
 			console.log('Authorization：',axios.defaults.headers.common.Authorization);
 			axios
 				.get('http://localhost:8080/api/get')
