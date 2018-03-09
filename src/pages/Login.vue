@@ -84,7 +84,7 @@ export default {
 
 			
 			axios.defaults.headers.common['Authorization'] = `Bearer ${this.$store.state.auth.token}`;
-			console.log(axios.defaults.headers.common.Authorization);
+			console.log('Authorization：',axios.defaults.headers.common.Authorization);
 			axios
 				.get('http://localhost:8080/api/get')
 				.then(function(response) {
