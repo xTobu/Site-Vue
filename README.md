@@ -3,8 +3,8 @@
 
 > [筆記](NOTE.md)
   
-![author](https://img.shields.io/badge/Author-Junxiang-yellow.svg)   
-![author](https://img.shields.io/badge/Version-0.0.0-blue.svg)
+![Author](https://img.shields.io/badge/Author-Junxiang-yellow.svg)   
+![Version](https://img.shields.io/badge/Version-0.0.0-blue.svg)
 ___
 ## Development
 **Dependencies**
