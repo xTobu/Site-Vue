@@ -42,3 +42,52 @@ Form Data(2)
 Form Data  
 {username: 'aa', password: 'bb'}
 ```  
+___
+
+## 2018-03-04
+### router.beforeEach
+#### next()的使用錯誤，MVVM觀念導正。
+- 錯誤
+> 若把next()放最後則必然會執行到，那便會跑兩個next()，沒辦法如期跳轉
+```
+if (
+	to.matched.some(record => {
+		if (record.name !== 'Login') {
+			return true;
+		}
+	})
+) {
+	if (!store.state.auth.token) {
+		console.log('token?', store.state.auth.token);
+		next({ path: '/Login' });
+	}
+}
+
+store.state.auth.token = false;
+next();
+```
+
+- 正確
+> 每一種可能都必須執行next()
+```
+if (
+	to.matched.some(record => {
+		//console.log(record.path);
+		if (record.name !== 'Login') {
+			return true;
+		}
+	})
+) {
+	if (!store.state.auth.token) {
+		next({ path: '/Login' });
+	}
+	else{
+		next();
+	}
+}
+else {
+	store.state.auth.token = false;
+	next();
+}
+```
+
