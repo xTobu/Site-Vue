@@ -1,10 +1,19 @@
+# <img src="https://sendeyo.com/up/ca66c006e4db83db14f95a4525f7a1c8.svg" height=50 alt="Keep a Changelog" />
 
 
-# Site
 
-> 基於 Vue.js  的 Front-End
+> 基於 Vue.js 的 Front-End 
 
-**Using**  
+> [筆記](NOTE.md)
+  
+![author](https://img.shields.io/badge/Author-Junxiang-yellow.svg)   
+![author](https://img.shields.io/badge/Version-0.0.0-blue.svg)
+
+ 
+
+## Development
+
+**Dependencies**
  - vue
  - vuex
  - vue-router
