@@ -74,7 +74,7 @@ export default {
 								}`;
 								setTimeout(() => {
 									this.loginForm.submiting = false;
-									this.$router.push({ path: 'Index' });
+									// this.$router.push({ path: 'Index' });
 								}, 1000);
 							} else {
 								console.log(res);
