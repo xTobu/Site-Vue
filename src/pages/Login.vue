@@ -84,7 +84,6 @@ export default {
 										this.loginForm.submiting = false;
 									},
 								});
-								
 							}
 						});
 				} else {

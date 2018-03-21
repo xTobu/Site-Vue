@@ -22,7 +22,6 @@ module.exports = {
           'css-loader'
         ],
       },
-
       {
         // test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
         test: /\.(eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
